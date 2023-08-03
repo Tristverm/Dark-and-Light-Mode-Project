@@ -1,7 +1,14 @@
-import React from 'react';
+import React from "react";
+
+// component imports
+import Hero from "./components/Hero";
 
 const App = () => {
-  return <div>react app</div>;
+  return (
+    <>
+      <Hero />
+    </>
+  );
 };
 
 export default App;
