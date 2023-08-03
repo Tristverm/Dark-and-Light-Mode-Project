@@ -8,8 +8,11 @@ import LogoWhite from "../assets/img/logo-white.svg";
 
 import { BsFillSunFill, BsMoonFill, BsCheck } from "react-icons/bs";
 
-const Hero = () => {
+//importing images
+import GirlImg from "../assets/img/girl.png";
+
+function Hero() {
   return <div>Hero</div>;
-};
+}
 
 export default Hero;
