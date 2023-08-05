@@ -1,13 +1,18 @@
-import React from "react";
+import React, { useRef } from "react";
 
 // component imports
 import Hero from "./components/Hero";
 
 const App = () => {
+  const appContainer = useRef();
+
   return (
-    <>
-      <Hero />
-    </>
+    <div
+      ref={appContainer}
+      id="app"
+    >
+      <Hero appContainer={appContainer} />
+    </div>
   );
 };
 
