@@ -12,7 +12,13 @@ import { BsFillSunFill, BsMoonFill, BsCheck } from "react-icons/bs";
 import GirlImg from "../assets/img/girl.png";
 
 function Hero() {
-  return <div>Hero</div>;
+  //  updating theme using state
+
+  return (
+    <section className="min-h-[740px] w-full bg-heroLight bg-cover bg-center bg-no-repeat overflow-hidden dark:bg-heroDark ">
+      Hero
+    </section>
+  );
 }
 
 export default Hero;
