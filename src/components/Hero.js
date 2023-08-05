@@ -13,10 +13,12 @@ import GirlImg from "../assets/img/girl.png";
 
 function Hero() {
   //  updating theme using state
+  const[(theme, setTheme)] = useState("light");
 
   return (
     <section className="min-h-[740px] w-full bg-heroLight bg-cover bg-center bg-no-repeat overflow-hidden dark:bg-heroDark ">
-      Hero
+      {/* buttton */}
+      button.p-4.bg-accent.text-white.rounded-full.w-12.h-12.flex.justify-center
     </section>
   );
 }
