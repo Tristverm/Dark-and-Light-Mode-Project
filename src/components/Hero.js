@@ -14,6 +14,7 @@ import GirlImg from "../assets/img/girl.png";
 function Hero({ appContainer }) {
   //  updating theme using state
   const [theme, setTheme] = useState("light");
+  localStorage.setItem("theme", `${theme.toString()}`);
 
   // themeSwitchHandler
 
@@ -21,13 +22,23 @@ function Hero({ appContainer }) {
     if (theme === "light") {
       appContainer.current.classList.add("dark");
       setTheme("dark");
+      // localStorage.removeItem("theme");
+      // localStorage.setItem("theme", "dark");
     } else {
       appContainer.current.classList.remove("dark");
       setTheme("light");
+      // localStorage.removeItem("theme");
+      // localStorage.setItem("theme", "light");
     }
   }
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    if (localStorage.getItem("theme") === "dark") {
+      appContainer.current.classList.add("dark");
+    } else if (localStorage.getItem("theme") === "light") {
+      appContainer.current.classList.remove("dark");
+    }
+  }, [appContainer]);
 
   return (
     <section className="min-h-[740px] w-full bg-heroLight bg-cover bg-center bg-no-repeat overflow-hidden dark:bg-heroDark ">
