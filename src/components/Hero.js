@@ -33,10 +33,11 @@ function Hero() {
     }
   }
   useEffect(() => {
-    if (localStorage.getItem(theme) === null) {
+    if (localStorage.getItem("theme") === "dark") {
       htmlRef.classList.add("dark");
-    }else
-  });
+      setTheme("dark");
+    }
+  }, []);
   return (
     <section className="min-h-[740px] w-full bg-heroLight bg-cover bg-center bg-no-repeat overflow-hidden dark:bg-heroDark ">
       {/* buttton */}
