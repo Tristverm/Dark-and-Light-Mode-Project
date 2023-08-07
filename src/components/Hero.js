@@ -36,6 +36,11 @@ function Hero() {
     if (localStorage.getItem("theme") === "dark") {
       htmlRef.classList.add("dark");
       setTheme("dark");
+    } else if (localStorage.getItem("theme") === null) {
+      localStorage.setItem("theme", "light");
+    } else if (localStorage.getItem("theme") === "light") {
+      htmlRef.classList.remove("dark");
+      setTheme("light");
     }
   }, []);
   return (
