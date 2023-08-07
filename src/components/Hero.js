@@ -1,4 +1,4 @@
-import React, { useState, useEffect, forwardRef } from "react";
+import React, { useState, useLayoutEffect } from "react";
 
 // logo importing
 import LogoDark from "../assets/img/logo-dark.svg";
@@ -32,7 +32,7 @@ function Hero() {
       localStorage.setItem("theme", "light");
     }
   }
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (localStorage.getItem("theme") === "dark") {
       htmlRef.classList.add("dark");
       setTheme("dark");
@@ -69,13 +69,25 @@ function Hero() {
         <div>
           {/* text */}
           <div>
-            <h1>
-              Web <br /> <span>Devs</span>{" "}
+            <h1 className="text-5xl text-primary front-bold mb-6 leading-[60px] dark:text-white">
+              Web <br /> <span className="text-accent">Devs</span>{" "}
             </h1>
-            <p>
-              We are a team of apssionate developers aiming at helpiing your
+            <p className="font-light text-grey mb-12 max-w-[597px] dark:text-white">
+              We are a team of passionate developers aiming at helpiing your
               business realize and achieve its pottential
             </p>
+            {/* checked items */}
+
+            <div className="flex flex-row items-center gap-x-2">
+              {/* item */}
+              <div>
+                {/* item icon */}
+                <div className="bg-accent/10 text-accent w-[20px] h-[20px]">
+                  <BsCheck />
+                </div>
+                <p>Have your work handled by professioanals</p>
+              </div>
+            </div>
           </div>
           {/* image */}
           <div className="hidden lg:flex flex-row ">
