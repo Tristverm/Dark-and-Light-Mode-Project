@@ -82,15 +82,17 @@ function Hero() {
               {/* item */}
               <div>
                 {/* item icon */}
-                <div className="bg-accent/10 text-accent w-[20px] h-[20px]">
+                <div className="bg-accent/10 text-accent w-[20px] h-[20px] rounded-full flex fex-row justify-center items-center dark:bg-accent/70 dark:text-blue">
                   <BsCheck />
                 </div>
-                <p>Have your work handled by professioanals</p>
+                <p className="text-base dark:text-white">
+                  Have your work handled by professioanals
+                </p>
               </div>
             </div>
           </div>
           {/* image */}
-          <div className="hidden lg:flex flex-row ">
+          <div className="hidden lg:flex flex-row font-light">
             <img
               src={GirlImg}
               alt="img"
