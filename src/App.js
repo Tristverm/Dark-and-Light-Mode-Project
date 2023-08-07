@@ -4,14 +4,9 @@ import React, { useRef } from "react";
 import Hero from "./components/Hero";
 
 const App = () => {
-  const appContainer = useRef();
-
   return (
-    <div
-      ref={appContainer}
-      id="app"
-    >
-      <Hero appContainer={appContainer} />
+    <div>
+      <Hero appContainer />
     </div>
   );
 };

@@ -11,35 +11,23 @@ import { BsFillSunFill, BsMoonFill, BsCheck } from "react-icons/bs";
 //importing images
 import GirlImg from "../assets/img/girl.png";
 
-function Hero({ appContainer }) {
-  //  updating theme using state
+function Hero() {
+  // setting the theme state
   const [theme, setTheme] = useState("light");
-  localStorage.setItem("theme", `${theme.toString()}`);
 
-  // themeSwitchHandler
-
+  //theme switch handler
   function themeSwitchHandler() {
+    // finding html element reference
+    const htmlRef = document.querySelector("#html");
+    // condition
     if (theme === "light") {
-      appContainer.current.classList.add("dark");
       setTheme("dark");
-      // localStorage.removeItem("theme");
-      // localStorage.setItem("theme", "dark");
+      htmlRef.classList.add("dark");
     } else {
-      appContainer.current.classList.remove("dark");
       setTheme("light");
-      // localStorage.removeItem("theme");
-      // localStorage.setItem("theme", "light");
+      htmlRef.classList.remove("dark");
     }
   }
-
-  useEffect(() => {
-    if (localStorage.getItem("theme") === "dark") {
-      appContainer.current.classList.add("dark");
-    } else if (localStorage.getItem("theme") === "light") {
-      appContainer.current.classList.remove("dark");
-    }
-  }, [appContainer]);
-
   return (
     <section className="min-h-[740px] w-full bg-heroLight bg-cover bg-center bg-no-repeat overflow-hidden dark:bg-heroDark ">
       {/* buttton */}
