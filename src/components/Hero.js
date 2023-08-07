@@ -52,7 +52,7 @@ function Hero() {
           <div>
             <a href="#">
               <img
-                src={theme === "light" ? LogoDark : LogoWhite}
+                src={theme === "dark" ? LogoWhite : LogoDark}
                 alt="logo"
               />
             </a>
@@ -65,6 +65,26 @@ function Hero() {
             {theme === "light" ? <BsMoonFill /> : <BsFillSunFill />}
           </button>
         </header>
+        {/* text and image container */}
+        <div>
+          {/* text */}
+          <div>
+            <h1>
+              Web <br /> <span>Devs</span>{" "}
+            </h1>
+            <p>
+              We are a team of apssionate developers aiming at helpiing your
+              business realize and achieve its pottential
+            </p>
+          </div>
+          {/* image */}
+          <div className="hidden lg:flex flex-row ">
+            <img
+              src={GirlImg}
+              alt="img"
+            />
+          </div>
+        </div>
       </div>
     </section>
   );
