@@ -45,13 +45,27 @@ function Hero() {
   }, []);
   return (
     <section className="min-h-[740px] w-full bg-heroLight bg-cover bg-center bg-no-repeat overflow-hidden dark:bg-heroDark ">
-      {/* buttton */}
-      <button
-        className="p-4 bg-accent text-white rounded-full w-12 h-12 flex justify-center items-center"
-        onClick={themeSwitchHandler}
-      >
-        {theme === "light" ? <BsMoonFill /> : <BsFillSunFill />}
-      </button>
+      <div className="container mx-auto px-4 lg:px-0 ">
+        {/* header */}
+        <header className="flex flex-row items-center justify-between">
+          {/* logo */}
+          <div>
+            <a href="#">
+              <img
+                src={theme === "light" ? LogoDark : LogoWhite}
+                alt="logo"
+              />
+            </a>
+          </div>
+          {/* buttton */}
+          <button
+            className="p-4 bg-accent text-white rounded-full w-12 h-12 flex justify-center items-center"
+            onClick={themeSwitchHandler}
+          >
+            {theme === "light" ? <BsMoonFill /> : <BsFillSunFill />}
+          </button>
+        </header>
+      </div>
     </section>
   );
 }
