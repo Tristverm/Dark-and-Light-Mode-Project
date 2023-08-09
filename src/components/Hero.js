@@ -78,16 +78,36 @@ function Hero() {
             </p>
             {/* checked items */}
 
-            <div className="flex flex-row items-center gap-x-2">
+            <div className="flex flex-col items-start gap-y-6 mb-12">
               {/* item */}
-              <div>
+              <div
+                className="flex
+                flex-row
+                items-center
+                justify-center
+                gap-x-2"
+              >
                 {/* item icon */}
-                <div className="bg-accent/10 text-accent w-[20px] h-[20px] rounded-full flex fex-row justify-center items-center dark:bg-accent/70 dark:text-blue">
+                <div className="bg-accent/10 text-accent w-[20px] h-[20px] rounded-full flex flex-row justify-center items-center dark:bg-accent/70 dark:text-blue">
                   <BsCheck />
                 </div>
                 <p className="text-base dark:text-white">
-                  Have your work handled by professioanals
+                  Where all minds dwell
                 </p>
+              </div>
+              {/* item */}
+              <div
+                className="flex
+                flex-row
+                items-center
+                justify-center
+                gap-x-2"
+              >
+                {/* item icon */}
+                <div className="bg-accent/10 text-accent w-[20px] h-[20px] rounded-full flex flex-row justify-center items-center dark:bg-accent/70 dark:text-blue">
+                  <BsCheck />
+                </div>
+                <p className="text-base dark:text-white">Contact US </p>
               </div>
             </div>
           </div>
