@@ -47,7 +47,7 @@ function Hero() {
     <section className="min-h-[740px] w-full bg-heroLight bg-cover bg-center bg-no-repeat overflow-hidden dark:bg-heroDark ">
       <div className="container mx-auto px-4 lg:px-0 ">
         {/* header */}
-        <header className="flex flex-row items-center justify-between mt-8git">
+        <header className="flex flex-row items-center justify-between mt-8">
           {/* logo */}
           <div>
             <a href="#">
