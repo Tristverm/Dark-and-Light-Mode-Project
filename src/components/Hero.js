@@ -66,9 +66,9 @@ function Hero() {
           </button>
         </header>
         {/* text and image container */}
-        <div>
+        <div className="flex flex-col lg:flex-row items-center lg:flex-1 min-h-[740px]">
           {/* text */}
-          <div>
+          <div className=" flex flex-col flex-1 justify-center items-start">
             <h1 className="text-5xl text-primary front-bold mb-6 leading-[60px] dark:text-white">
               Web <br /> <span className="text-accent">Devs</span>{" "}
             </h1>
@@ -109,10 +109,12 @@ function Hero() {
                 </div>
                 <p className="text-base dark:text-white">Contact US </p>
               </div>
+              {/* button */}
+              <button className="btn">Discover Our Work Plans</button>
             </div>
           </div>
           {/* image */}
-          <div className="hidden lg:flex flex-row font-light">
+          <div className="hidden lg:flex flex-row font-light self-end">
             <img
               src={GirlImg}
               alt="img"
